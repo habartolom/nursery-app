@@ -16,8 +16,10 @@ export class PlantListComponent implements OnInit {
   constructor(private plantService: PlantService) {}
 
   ngOnInit(): void {
-    this.plantService.getPlants().subscribe(plants =>
-      this.plants = plants
-    );
+    this.plantService.getPlants().subscribe(plants => {
+      this.plants = plants;
+      this.totalInterior = plants.filter(plant => plant.tipo === 'Interior')?.length || 0;
+      this.totalExterior = plants.filter(plant => plant.tipo === 'Exterior')?.length || 0;
+    });
   }
 }

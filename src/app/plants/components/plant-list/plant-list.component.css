@@ -1,23 +1,60 @@
-.custom-img-shadow {
-  border: 2px solid #e0e0e0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10), 0 1.5px 4px rgba(0,0,0,0.08);
+.custom-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #212529;
 }
 
-.custom-table thead tr {
-  background: #2d353a;
-  color: #fff;
+.custom-hr {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.custom-hr-shadow {
+  position: relative;
+  height: 3px;
+  background: linear-gradient(to right, rgba(0,0,0,0.25), rgba(0,0,0,0));
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.custom-hr-shadow::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  pointer-events: none; 
+}
+
+/* Imagen */
+.custom-img-shadow {
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.custom-thead th {
+  background-color: #343c3f !important;
+  color: white !important;
+  font-weight: 700;
+}
+
+.custom-table {
+  background: white;
+  border-collapse: separate;
+  border-spacing: 0;
 }
 
 .custom-table th, .custom-table td {
-  border: none;
-  border-bottom: 1.5px solid #e0e0e0;
   vertical-align: middle;
+  border: none;
 }
-
 .custom-table th {
   font-weight: 700;
   font-size: 1.05rem;
-  padding: 10px 12px;
+  padding: 10px 14px;
 }
 
 .custom-th-num {
@@ -31,17 +68,28 @@
   text-align: left;
 }
 
-.custom-table tbody tr:last-child td {
-  border-bottom: none;
+.custom-tr {
+  position: relative;
 }
 
-.custom-total {
-  color: #555;
-  font-weight: 600;
+.custom-tr::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.total-text {
+  font-weight: 400;
   font-size: 1rem;
+  color: #333;
 }
 
 footer p {
   font-size: 1.05rem;
   letter-spacing: 0.5px;
+  text-shadow: 1px 2px 2px #bbb;
 }

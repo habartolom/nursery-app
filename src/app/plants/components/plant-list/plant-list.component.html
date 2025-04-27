@@ -1,40 +1,44 @@
 <div class="container mt-4">
-  <div class="border rounded shadow-sm p-4 bg-white">
-    <h1 class="mb-2 fw-bold">Vivero El Otoño</h1>
-    <hr class="mt-0 mb-4">
+  <div class="p-3">
+    <h1 class="mb-2 fw-bold custom-title">Vivero El Otoño</h1>
+    <hr class="mt-0 mb-4 custom-hr custom-hr-shadow">
 
     <div class="mb-4">
-      <img src="assets/nursery-image.png" alt="Vivero El Otoño" class="img-fluid w-100 custom-img-shadow" style="max-height: 250px; object-fit: cover;">
+      <img src="assets/banner.jpeg" alt="Vivero El Otoño" class="img-fluid w-100 custom-img-shadow" style="max-height: 250px; object-fit: cover;">
     </div>
 
-    <table class="table table-striped custom-table mb-2">
-      <thead>
-        <tr>
-          <th class="custom-th-num">#</th>
-          <th>Nombre común</th>
-          <th>Tipo</th>
-          <th>Clima</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let plant of plants; let i = index">
-          <td class="custom-td-num">{{ i + 1 }}</td>
-          <td>{{ plant.nombre_comun }}</td>
-          <td>{{ plant.tipo }}</td>
-          <td>{{ plant.clima }}</td>
-        </tr>
-      </tbody>
-    </table>
+    <hr class="my-4 custom-hr">
 
-    <div class="mb-2 ms-1">
-      <p class="mb-1 custom-total"><strong>Total plantas de interior:</strong> {{ totalInterior }}</p>
-      <p class="mb-0 custom-total"><strong>Total plantas de exterior:</strong> {{ totalExterior }}</p>
+    <div class="ms-3 me-3">
+      <table class="table custom-table mb-4">
+        <thead class="custom-thead">
+          <tr>
+            <th class="custom-th-num">#</th>
+            <th>Nombre común</th>
+            <th>Tipo</th>
+            <th>Clima</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let plant of plants; let i = index" class="custom-tr">
+            <td class="custom-td-num">{{ i + 1 }}</td>
+            <td>{{ plant.nombre_comun }}</td>
+            <td>{{ plant.tipo }}</td>
+            <td>{{ plant.clima }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="mb-2 ms-1">
+        <p class="mb-1 total-text">Total plantas de interior: {{ totalInterior }}</p>
+        <p class="mb-0 total-text">Total plantas de exterior: {{ totalExterior }}</p>
+      </div>
     </div>
   </div>
 
   <footer class="text-center mt-4">
     <p class="fw-bold mb-0">
-      {{`Contact us: +57 3102105253 - info@viveroelotono.com - &#64;viveroelotono`}}
+      {{`Contact us: +57 3102105253 - info@viveroelotono.com - @viveroelotono`}}
     </p>
   </footer>
 </div>
