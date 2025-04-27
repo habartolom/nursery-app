@@ -10,6 +10,8 @@ import { Plant } from '../../models/plant';
 })
 export class PlantListComponent implements OnInit {
   plants: Plant[] = [];
+  totalInterior = 0;
+  totalExterior = 0;
 
   constructor(private plantService: PlantService) {}
 
