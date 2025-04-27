@@ -1,0 +1,19 @@
+<div class="container mt-4">
+  <h2>Lista de Plantas</h2>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Nombre Común</th>
+        <th>Tipo</th>
+        <th>Clima</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let plant of plants">
+        <td>{{ plant.nombre_comun }}</td>
+        <td>{{ plant.tipo }}</td>
+        <td>{{ plant.clima }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
